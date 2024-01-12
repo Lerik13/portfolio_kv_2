@@ -1,0 +1,73 @@
+---
+import { BackgroundImage, ImageSupportDetection } from "astro-imagetools/components";
+
+import Layout from '../layouts/Layout.astro';
+const src = "/src/assets/images/bg_main.jpg"
+---
+
+<Layout>
+	<!-- alt="Main background image" -->
+
+	<article class="scroll-wrapper">
+		<section class="scroll-section">
+			<BackgroundImage
+				src="/src/assets/images/bg_main.jpg"
+				format={["avif", "webp"]}
+				backgroundSize="cover"
+				backgroundPosition="0 0"
+			>
+
+			<div class="h-full">
+				<div class="container">
+					<div>
+						<div class="main-logo">
+							<svg id="logo" viewBox="0 0 388 323" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M10 162L65 94L151 213L272 12L380 108L157 317L10 162Z" fill="#FF4500" stroke="#FF4500" />
+								<path d="M4.48412 1L7.2429 318.998" stroke="white" stroke-width="14" />
+								<line x1="131.731" y1="3.18857" x2="6.73132" y2="159.189" stroke="white"
+									stroke-width="7" />
+								<line x1="7.47708" y1="162.426" x2="157.477" y2="318.426" stroke="white"
+									stroke-width="7" />
+								<path d="M154.617 320.437L383 106" stroke="white" stroke-width="7" />
+								<line x1="385.656" y1="108.599" x2="273.656" y2="7.59923" stroke="white"
+									stroke-width="7" />
+								<line x1="273" y1="3.1971" x2="151" y2="206.197" stroke="white" stroke-width="7" />
+								<line x1="151.166" y1="210.054" x2="64.1664" y2="90.0544" stroke="white"
+									stroke-width="7" />
+							</svg>
+						</div>
+					</div>
+					<div class="main-text">
+						<div>
+							<h2>
+								Hello, I&apos;m Valeria Kan!
+							</h2>
+							<p class="text-hello__content">
+								A passionate Front End Developer based in Edmonton, Canada.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			</BackgroundImage>
+		</section>
+
+		<section class="scroll-section">
+			<h2>Section two</h2>
+		</section>
+		<section class="scroll-section">
+			<h2>Section three</h2>
+		</section>
+		<section class="scroll-section">
+			<h2>Section four</h2>
+		</section>
+		<section class="scroll-section">
+			<h2>Section five</h2>
+		</section>
+	</article>
+
+</Layout>
+
+<script>
+	/* import "../js/firefly.js" */
+</script>

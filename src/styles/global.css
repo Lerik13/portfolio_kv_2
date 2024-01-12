@@ -1,0 +1,147 @@
+@import 'vars';
+@import 'null';
+@import 'nav';
+/* @import 'firefly'; */
+
+:--heading {
+	font-family: $fontHeading;
+	font-weight: 600;
+	line-height: 130%;
+}
+
+h1 {
+	font-size: calc(16px + 2px);
+}
+
+body {
+	color: $blackColor;
+	min-height: 100vh;
+	font-size: 1rem;
+	font-weight: 300;
+	line-height: 1.5;
+}
+
+.container {
+	border: 1px solid blue;
+	height: 100%;
+	/* width: 1200px; */
+	width: 100%;
+	max-width: none;
+	margin: 0 auto;
+	padding: 0 15px;
+	display: flex;
+	flex-direction: column;
+
+	@media (width > $md3) {
+		max-width: 750px;
+	}
+	@media (width > $md2) {
+		max-width: 970px;
+	}
+	@media (width >= $md1) {
+		max-width: 1200px;
+	}
+}
+
+.h-full {
+	border: 1px solid yellow;
+	min-height: 100%;
+	width: 100%;
+	/* height: 100%; */
+	height: calc(100vh - 50px);
+	display: flex;
+	flex-direction: column;
+	padding: 20px 0;
+	@media (width > $md2) {
+		padding: 50px 0;
+	}
+}
+
+.scroll-wrapper {
+	border: 2px solid red;
+	height: 100vh;
+	height: 100dvh;
+	overflow-y: scroll;
+	scroll-snap-type: y proximity;
+	padding-top: 50px;
+	scroll-padding-top: 50px;
+}
+.scroll-section {
+	z-index: 0;
+	display: flex;
+	flex-direction: column;
+	background-color: $bg0Color;
+	scroll-snap-stop: always;
+	height: 100%;
+	scroll-snap-align: start;
+	
+	&:nth-child(odd) {
+		background-color: $bg2Color;
+		color: $whiteColor;
+	}
+}
+
+.main-logo {
+	border: 2px solid red;
+	display: flex;
+	height: 100px;
+
+	@media (width > $md3) {
+		height: 150px;
+	}
+	@media (width > $md2) {
+		height: 250px;
+	}
+	@media (width >= $md1) {
+		height: 300px;
+	}
+}
+.main-text {
+	border: 1px solid yellow;
+	flex: 1 1 auto;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	color: $whiteColor;
+
+	::before {
+		content: '';
+		position: absolute;
+		top: -19px;
+		left: 40px;
+		width: 40px;
+		height: 20px;
+		border-bottom: solid 20px $orangeColor;
+		border-left: solid 20px transparent;
+		border-right: solid 20px transparent;	
+
+		@media (width > $md3) {
+			top: -29px;
+			left: 60px;
+			width: 60px;
+			height: 30px;
+			border-bottom-width: 30px;
+			border-left-width: 30px;
+			border-right-width: 30px;
+		}
+	}
+
+	& > div {
+		background-color: $orangeColor;
+		padding: 20px;
+		position: relative;
+		border-radius: 8px;
+		max-width: 490px; /* 490px; */
+		@media (width > $md3) {
+			max-width: 543px;
+		}
+	}
+
+	h2{
+		font-size: 2.0rem;
+
+		@media (width > $md3) {
+			font-size: 2.6rem;
+		}
+	}
+}

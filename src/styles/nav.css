@@ -1,0 +1,35 @@
+nav {
+	height: 50px;
+	position: fixed;
+	z-index:100;
+	background-color: $blackColor;
+	width: 100%;
+	display: flex;
+}
+
+nav > div {
+	display: flex;
+	justify-content: center;
+}
+
+nav {
+	ul {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		font-size: 18px;
+		margin-right: 20px;
+	}
+	li {
+		margin-left: 20px;
+	}
+	a {
+		color: $whiteColor;
+	}
+	a:hover, a.active {
+		color: $orangeColor;
+	}
+	a.active {
+		color: $orangeColor;
+	}
+}
