@@ -1,10 +1,12 @@
 @custom-media --desktop-device screen and (width >= 1024px);
 @custom-selector :--heading h1,h2,h3,h4,h5,h6;
 
-$orangeColor: #ff4500;
+$orangeColor: hsla(16, 100%, 50%, 1);
+$orangeColorA: hsla(16, 100%, 50%, 0.8);
 $whiteColor: #fff;
 $blackColor: #0e1317;
-$yellowColor: #F3B30D;
+$yellowColor: hsla(43, 91%, 50%, 1);
+$yellowColorA: hsla(43, 91%, 50%, 0.8);
 $lightGrayColor: #a0aec0;
 $grayColor: #4a5568;
 $bg0Color: #a0aec0;
@@ -18,6 +20,8 @@ $md1: 1200px;
 $md2: 991.98px;
 $md3: 767.98px;
 $md4: 479.98px;
+
+$rounded: 1rem;
 
 $fontHeading: "Poppins", sans-serif;
 $fontBody: "Roboto", sans-serif;

@@ -1,0 +1,89 @@
+---
+import { Image } from "astro:assets";
+import { Icon } from 'astro-icon/components';
+
+import projects from '../data/projectsData';
+const len = projects.length;
+
+const images = import.meta.glob('/src/assets/projects/*.{jpeg,jpg,png,gif}')
+---
+
+<div class="projects">
+	<div class="projects-inner">
+		<div class="projects-carousel" id="projects-carousel">
+			{projects.map(project => (
+				<article class="card">
+					<div class="card-image">
+						<Image src={images['/src/assets'+project.image]()} alt={project.name} width="400" height="400" />
+					</div>
+					<div class="card-body">
+						<h4>{project.name}</h4>
+						<p class="desc">{project.description}</p>
+						<p class="tech"><span>Using techs:</span> {project.technologies}</p>
+					</div>
+					<div class="card-btns">
+						<a href={project.link_demo} class="btn-demo">
+							<span>Demo</span>
+							<Image src="/demo.svg" alt="" width={22} height={22} />
+						</a>
+						<a href={project.link_code} class="btn-demo">
+							<span>Code</span>
+							<Image src="/code.svg" alt="" width={22} height={22} />
+						</a>
+					</div>
+				</article>
+			))}
+		</div>
+	</div>
+
+	<button id="carousel-arrow-left" class="disabledContent arrow arrow-left">
+		<Icon name="ri:arrow-left-s-line" width="36px" />
+	</button>
+	<button id="carousel-arrow-right" class="arrow arrow-right">
+		<Icon name="ri:arrow-right-s-line" width="36px" />
+	</button>
+</div>
+
+<script define:vars={{ len }}>
+	let slideIndex = 0;
+	let shift = 20;
+	let limit_right = len-1;
+
+	const calcShift = () => {
+		if (screen.width > 1439) {
+			limit_right = len-3;
+		}
+
+	}
+	calcShift();
+	window.addEventListener("resize", calcShift);
+
+	function changeSlide(i) {
+		slideIndex = i;
+
+		document.querySelector('#carousel-arrow-left').classList.remove('disabledContent');
+		document.querySelector('#carousel-arrow-right').classList.remove('disabledContent');
+		if (slideIndex === 0) {
+			document.querySelector('#carousel-arrow-left').classList.add('disabledContent');
+		}
+		if (slideIndex === limit_right) { 
+			document.querySelector('#carousel-arrow-right').classList.add('disabledContent');
+		}
+
+		document.querySelector('#projects-carousel').style.transform = `translate(-${shift * slideIndex}rem)`;
+	}
+
+	function moveSliderLeft() {
+		slideIndex--;
+		changeSlide(slideIndex);
+	}
+
+	function moveSliderRight() {
+		slideIndex++;
+		changeSlide(slideIndex);
+	}
+
+	document.querySelector('#carousel-arrow-left').addEventListener('click', moveSliderLeft)
+	document.querySelector('#carousel-arrow-right').addEventListener('click', moveSliderRight)
+
+</script>

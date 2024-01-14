@@ -1,16 +1,14 @@
 @import 'vars';
 @import 'null';
 @import 'nav';
+@import 'logo';
+@import 'projects';
 /* @import 'firefly'; */
 
 :--heading {
 	font-family: $fontHeading;
 	font-weight: 600;
 	line-height: 130%;
-}
-
-h1 {
-	font-size: calc(16px + 2px);
 }
 
 body {
@@ -70,7 +68,7 @@ body {
 	z-index: 0;
 	display: flex;
 	flex-direction: column;
-	background-color: $bg0Color;
+	background-color: $bg1Color;
 	scroll-snap-stop: always;
 	height: 100%;
 	scroll-snap-align: start;
@@ -81,8 +79,22 @@ body {
 	}
 }
 
+h2 {
+	font-size: 2.2rem;
+	font-weight: 600;
+	margin-top: 30px;
+	display: inline-block;
+	border: 0px solid green;
+	z-index: 1;
+	width: fit-content;
+	background: linear-gradient(to bottom, $orangeColorA, $yellowColorA) 0 30px/100% 22px repeat-x;
+
+	@media (width > $md3) {
+		font-size: 2.6rem;
+	}
+}
+
 .main-logo {
-	border: 2px solid red;
 	display: flex;
 	height: 100px;
 
@@ -97,11 +109,10 @@ body {
 	}
 }
 .main-text {
-	border: 1px solid yellow;
 	flex: 1 1 auto;
 	display: flex;
 	justify-content: flex-end;
-	align-items: flex-end;
+	align-items: center;
 	color: $whiteColor;
 
 	::before {
@@ -137,7 +148,7 @@ body {
 		}
 	}
 
-	h2{
+	h3{
 		font-size: 2.0rem;
 
 		@media (width > $md3) {

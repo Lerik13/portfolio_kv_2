@@ -11,5 +11,7 @@ module.exports = {
 		require('postcss-for'),
 		require('postcss-calc'),
 		require('postcss-random'),
+		require('postcss-color-hsl'),
+		require('postcss-easing-gradients'),
 	]
 };
