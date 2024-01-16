@@ -13,5 +13,6 @@ module.exports = {
 		require('postcss-random'),
 		require('postcss-color-hsl'),
 		require('postcss-easing-gradients'),
+		require('postcss-csso'),
 	]
 };

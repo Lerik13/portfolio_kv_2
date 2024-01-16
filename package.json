@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "astro": "^4.1.1",
+    "astro-compress": "^2.2.8",
     "astro-icon": "^1.0.2",
     "astro-imagetools": "^0.9.0"
   },
@@ -25,6 +26,7 @@
     "autoprefixer": "^10.4.16",
     "postcss-calc": "^9.0.1",
     "postcss-color-hsl": "^2.0.0",
+    "postcss-csso": "^6.0.1",
     "postcss-custom-media": "^10.0.2",
     "postcss-easing-gradients": "^3.0.1",
     "postcss-for": "^2.1.1",
