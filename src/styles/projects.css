@@ -28,6 +28,10 @@
 	box-shadow: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -2px rgba(0, 0, 0, .05);
 	background-color: $whiteColor;
 
+	@media (width >= $md1) {
+		width: 365px;
+	}
+
 	&-image {
 		border-bottom: 0px solid $grayColor;
 		height: 200px;
@@ -43,7 +47,13 @@
 
 	&-body {
 		flex: 1 1 auto;
-		padding: 10px;
+		padding: 10px 20px 10px 20px;
+		/* font-size: 14px; */
+
+		@media (width > $md3) {
+			padding-top: 20px;
+			/* font-size: 16px; */
+		}
 
 		h4 {
 			font-size: 18px;
@@ -62,22 +72,22 @@
 		p.tech {
 			font-size: 14px;
 			span {
-				//font-style: italic;
+				/* font-style: italic; */
 				text-decoration: underline;
 			}
 		}
 	}
 
 	&-btns {
-		padding: 0 10px 10px 10px;
+		padding: 0 20px 10px 20px;
 		display: flex;
-		justify-content: space-between;
+		gap: 10px;
 		
 		a {
 			display: flex;
 			gap: 8px;
 			font-family: $fontHeading;
-			padding: 10px 30px;
+			padding: 10px 25px;
 			border: none;
 			cursor: pointer;
 			max-width: fit-content;
@@ -85,6 +95,10 @@
 			color: $whiteColor;
 			border-radius: 34px;
 			transition: box-shadow 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+			@media (width > $md1) {
+				padding: 10px 30px;
+			}
 		}
 	}
 }

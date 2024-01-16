@@ -1,11 +1,11 @@
 ---
+import { Image } from "astro:assets";
 import { BackgroundImage } from "astro-imagetools/components";
 
 import Layout from '../layouts/Layout.astro';
 import CarouselProjects from '../components/CarouselProjects.astro';
 
-import projects from '../data/projectsData';
-const len = projects.length;
+import photoImage from "../assets/images/photo.jpg";
 ---
 
 <Layout>
@@ -53,18 +53,72 @@ const len = projects.length;
 			</BackgroundImage>
 		</section>
 
-		<section class="scroll-section" id="works" data-anchor="works">
+		<section class="scroll-section adapt-height" id="works" data-anchor="works">
 			<div class="container">
 				<h2>Few My Projects</h2>
 				<CarouselProjects />
 			</div>
 		</section>
 
-		<section class="scroll-section" id="about" data-anchor="about">
-			<h2>About me</h2>
+		<section class="scroll-section adapt-height" id="about" data-anchor="about">
+			<div class="container">
+				<h2>About me</h2>
+				<div class="about-content">
+					<div class="about-text">
+						<p>Hi &hellip; I&apos;m a passionate, enthusiastic and professional Web Developer who loves creating and developing beautiful web experiences using all the skills I&apos;ve acquired over 4 years of dedication to studying and freelancing.
+						</p>
+						<p>During last 2 years I&apos;ve been working on many various projects to polish my skills in web development. Building a successful product is a challenge. My main approach is focusing on comfortable interface, clean code and professional performance.
+						</p>
+						<p>In the outside of coding, I found my passion in kids parties, so I&apos;ve organized my event agency for bringing joy and happiness. I deeply understand what it takes for local business to succeed online.
+						</p>
+						
+						<a href="\cv_valeria_kan_web_developer.pdf" class="about-link" target="_blank">
+							See My Resume
+						</a>
+						
+						<h3>My Skills</h3>
+						<p>
+							I use a number of tools that make design and development much easier.
+						</p>
+						<p>
+							<span class="about-skill">Web App Development:</span>
+							HTML5, CSS3, SASS/LESS, React, Astro, Next.js, Redux, JSON, jQuery, GULP, WebPack, Vite, Bootstrap, Material UI, Tailwind CSS, PostCSS
+						</p>
+						<p>
+							<span class="about-skill">Languages:</span>
+							JavaScript, TypeScript, Node.js, PHP
+						</p>
+						<p>
+							<span class="about-skill">Databases:</span>
+							MySQL, MongoDB, PostgreSQL, FireBase
+						</p>
+						<p>
+							<span class="about-skill">Testing:</span>
+							Jest, Selenium, React Testing Library, Postman
+						</p>
+						<p>
+							<span class="about-skill">DevOps:</span>
+							Git/GitHub, CI/CD
+						</p>
+						<p>
+							<span class="about-skill">UI design, Graphic design and Prototyping:</span>
+							Figma, Adobe Photoshop
+						</p>
+						<p>
+							<span class="about-skill">Other:</span>
+							Google Apps(Docs, sheets, slides and forms), Google Analytics, Google Optimize
+						</p>
+					</div>
+					<div class="about-img">
+						<Image src={photoImage} alt="my photo picture" format="avif" />
+					</div>
+				</div>
+			</div>
 		</section>
 		<section class="scroll-section" id="contacts" data-anchor="contacts">
-			<h2>Contacts</h2>
+			<div class="container">
+				<h2>Contact</h2>
+			</div>
 		</section>
 	</div>
 

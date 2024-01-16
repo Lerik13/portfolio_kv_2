@@ -50,14 +50,16 @@ const images = import.meta.glob('/src/assets/projects/*.{jpeg,jpg,png,gif}')
 	let limit_right = len-1;
 
 	const calcShift = () => {
+		if (screen.width > 1199) {
+			shift = 25;
+		}
 		if (screen.width > 1439) {
 			limit_right = len-3;
 		}
-
 	}
 	calcShift();
 	window.addEventListener("resize", calcShift);
-
+	
 	function changeSlide(i) {
 		slideIndex = i;
 
