@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import { Icon } from 'astro-icon/components';
 import { BackgroundImage } from "astro-imagetools/components";
 
 import Layout from '../layouts/Layout.astro';
@@ -10,8 +11,8 @@ import photoImage from "../assets/images/photo.jpg";
 
 <Layout>
 
-	<div class="scroll-wrapper" id="main" data-anchor="main">
-		<section class="scroll-section">
+	<div class="scroll-wrapper">
+		<section class="scroll-section" id="main" data-anchor="main">
 			<BackgroundImage
 				src="/src/assets/images/bg_main.jpg"
 				format={["avif", "webp"]}
@@ -38,7 +39,7 @@ import photoImage from "../assets/images/photo.jpg";
 								</svg>
 							</div>
 						</div>
-						<div class="main-text">
+						<div class="main-text comment-block">
 							<div>
 								<h3>
 									Hello, I&apos;m Valeria Kan!
@@ -115,10 +116,42 @@ import photoImage from "../assets/images/photo.jpg";
 				</div>
 			</div>
 		</section>
-		<section class="scroll-section" id="contacts" data-anchor="contacts">
-			<div class="container">
-				<h2>Contact</h2>
-			</div>
+		<section class="scroll-section" id="contact" data-anchor="contact">
+			<BackgroundImage
+				src="/src/assets/images/bg_contact.jpg"
+				format={["avif", "webp"]}
+				backgroundSize="cover"
+				backgroundPosition="0 0"
+			>
+				<div class="h-full">
+					<div class="container contacts-content">
+						<h2>Contacts</h2>
+
+						<div class="contacts-info">
+							<a href="mailto:Kan.Valeria1309@gmail.com" target="_blank">
+								<Icon name="eva:email-outline" width="30px" height="30px" />
+								<span>Kan.Valeria1309@gmail.com</span>
+							</a>
+							<a href="https://www.linkedin.com/in/valeria-kan" target="_blank">
+								<Icon name="eva:linkedin-fill" width="30px" height="30px" />
+								LinkedIn.com/in/Valeria-Kan
+							</a>
+							<a href="https://github.com/Lerik13" target="_blank">
+								<Icon name="eva:github-fill" width="30px" height="30px" />
+								GitHub.com/Lerik13
+							</a>
+						</div>
+
+						<div class="comment-block contacts-comment">
+							<div>
+								<p class="text-hello__content">
+									Please let me know if you have any idea for linking up with me.<br> I&apos;d love to hear from you :)
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</BackgroundImage>
 		</section>
 	</div>
 

@@ -5,6 +5,7 @@ $orangeColor: hsla(16, 100%, 50%, 1);
 $orangeColorA: hsla(16, 100%, 50%, 0.8);
 $whiteColor: #fff;
 $blackColor: #0e1317;
+$blackColorA: hsla(0,0%,0%, 0.8);
 $yellowColor: hsla(43, 91%, 50%, 1);
 $yellowColorA: hsla(43, 91%, 50%, 0.8);
 $lightGrayColor: #a0aec0;

@@ -20,7 +20,6 @@ body {
 }
 
 .container {
-	border: 0px solid blue;
 	height: 100%;
 	/* width: 1200px; */
 	width: 100%;
@@ -42,7 +41,6 @@ body {
 }
 
 .h-full {
-	border: 0px solid yellow;
 	min-height: 100%;
 	width: 100%;
 	/* height: 100%; */
@@ -56,7 +54,6 @@ body {
 }
 
 .scroll-wrapper {
-	border: 0px solid red;
 	height: 100vh;
 	height: 100dvh;
 	overflow-y: scroll;
@@ -91,7 +88,6 @@ h2 {
 	font-weight: 600;
 	margin: 20px 0 10px 0;
 	display: inline-block;
-	border: 0px solid green;
 	z-index: 1;
 	width: fit-content;
 	background: linear-gradient(to bottom, $orangeColorA, $yellowColorA) 0 30px/100% 22px repeat-x;
@@ -121,6 +117,9 @@ h2 {
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
+}
+
+.comment-block {
 	color: $whiteColor;
 
 	::before {
@@ -150,7 +149,7 @@ h2 {
 		padding: 20px;
 		position: relative;
 		border-radius: 8px;
-		max-width: 490px; /* 490px; */
+		max-width: 490px;
 		@media (width > $md3) {
 			max-width: 543px;
 		}
@@ -222,10 +221,36 @@ h2 {
 		padding-bottom: 40px;
 	}
 	img {
-		border: 0px solid blue;
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
 	}
 }
 
+.contacts-content {
+	color: $whiteColor;
+	display: flex;
+	flex-direction: column;
+	gap: 30px
+}
+
+.contacts-info {
+	display: flex;
+	gap: 10px;
+	flex-direction: column;
+	padding: 20px;
+	width: fit-content;
+	background: $blackColorA;
+
+	a {
+		color: $whiteColor;
+		display: flex;
+		gap: 10px;
+		align-items: flex-end;
+	}
+}
+
+.contacts-comment {
+	display: flex;
+	justify-content: flex-end;
+}

@@ -3,16 +3,19 @@
 <nav>
 	<div class="container">
 		<ul>
-			<li><a href="/#home" class="active">Main</a></li>
-			<li><a href="/#works">Works</a></li>
-			<li><a href="/#about">About</a></li>
-			<li><a href="/#contact">Contact</a></li>
+			<li><a class="a-nav active" href="/#main" id="a-main">Main</a></li>
+			<li><a class="a-nav" href="/#works" id="a-works">Works</a></li>
+			<li><a class="a-nav" href="/#about" id="a-about">About</a></li>
+			<li><a class="a-nav" href="/#contact" id="a-contact">Contact</a></li>
 		</ul>
 	</div>
 </nav>
 
 <script>
-	{/*
-		import "../js/nav.js"
-	*/}
+	document.querySelectorAll(".a-nav").forEach(a => a.addEventListener('click', setLinkActive));
+
+	function setLinkActive(e){
+		document.querySelectorAll(".a-nav").forEach(a => a.classList.remove('active'));
+		document.querySelector(`#${e.target.id}`).classList.add('active');
+	}
 </script>
