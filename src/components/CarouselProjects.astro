@@ -17,7 +17,7 @@ const images = import.meta.glob('/src/assets/projects/*.{jpeg,jpg,png,gif}')
 						<Image src={images['/src/assets'+project.image]()} alt={project.name} width="400" height="400" />
 					</div>
 					<div class="card-body">
-						<h4>{project.name}</h4>
+						<h3>{project.name}</h3>
 						<p class="desc">{project.description}</p>
 						<p class="tech"><span>Using techs:</span> {project.technologies}</p>
 					</div>
@@ -36,10 +36,10 @@ const images = import.meta.glob('/src/assets/projects/*.{jpeg,jpg,png,gif}')
 		</div>
 	</div>
 
-	<button id="carousel-arrow-left" class="disabledContent arrow arrow-left">
+	<button id="carousel-arrow-left" class="disabledContent arrow arrow-left" aria-label="Arrow Left">
 		<Icon name="ri:arrow-left-s-line" width="36px" heigh="36px" />
 	</button>
-	<button id="carousel-arrow-right" class="arrow arrow-right">
+	<button id="carousel-arrow-right" class="arrow arrow-right" aria-label="Arrow Right">
 		<Icon name="ri:arrow-right-s-line" width="36px" heigh="36px" />
 	</button>
 </div>
