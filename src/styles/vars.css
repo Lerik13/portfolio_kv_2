@@ -3,16 +3,15 @@
 
 $orangeColor: hsla(16, 100%, 50%, 1);
 $orangeColorA: hsla(16, 100%, 50%, 0.8);
-$whiteColor: #fff;
-$blackColor: #0e1317;
+$whiteColor: hsl(207, 0%, 100%);
+$blackColor: hsl(207, 24%, 7%);
 $blackColorA: hsla(0,0%,0%, 0.8);
 $yellowColor: hsla(43, 91%, 50%, 1);
 $yellowColorA: hsla(43, 91%, 50%, 0.8);
-$lightGrayColor: #a0aec0;
-$grayColor: #4a5568;
-$bg0Color: #a0aec0;
-$bg1Color: #edf2f7;
-$bg2Color: #151515;
+$lightGrayColor: hsl(214, 20%, 69%);
+$grayColor: hsl(218, 17%, 35%);
+$bg1Color: hsl(210, 38%, 95%);
+$bg2Color: hsl(199, 90%, 4%);
 
 $minWidth: 320px;
 $maxWidth: 1920px;
