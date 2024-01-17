@@ -22,11 +22,11 @@ const images = import.meta.glob('/src/assets/projects/*.{jpeg,jpg,png,gif}')
 						<p class="tech"><span>Using techs:</span> {project.technologies}</p>
 					</div>
 					<div class="card-btns">
-						<a href={project.link_demo} class="btn-demo">
+						<a href={project.link_demo} class="btn-demo" aria-label="Open demo project" target="_blank">
 							<span>Demo</span>
 							<Image src="/demo.svg" alt="" width={22} height={22} />
 						</a>
-						<a href={project.link_code} class="btn-demo">
+						<a href={project.link_code} class="btn-demo" aria-label="Open github to observe code of project" target="_blank">
 							<span>Code</span>
 							<Image src="/code.svg" alt="" width={22} height={22} />
 						</a>
