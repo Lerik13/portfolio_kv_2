@@ -101,6 +101,7 @@ h2 {
 .main-logo {
 	display: flex;
 	height: 100px;
+	padding-top: 20px;
 
 	@media (width > $md3) {
 		height: 150px;
