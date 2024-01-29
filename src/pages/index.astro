@@ -11,8 +11,8 @@ import photoImage from "../assets/images/photo.jpg";
 
 <Layout>
 
-	<div class="scroll-wrapper">
-		<section class="scroll-section" id="main" data-anchor="main">
+	<div class="scroll-wrapper" data-scroller>
+		<section data-section class="scroll-section" id="main" data-anchor="main">
 			<BackgroundImage
 				src="/src/assets/images/bg_main.jpg"
 				format={["avif", "webp"]}
@@ -45,7 +45,9 @@ import photoImage from "../assets/images/photo.jpg";
 									Hello, I&apos;m Valeria Kan!
 								</h3>
 								<p>
-									A passionate Front End Developer based in Edmonton, Canada.
+									A passionate Full Stack Developer based in Edmonton, Canada.<br />
+									I'm enthusiastic about the possibilities that lie ahead in the tech world, and I'm eager to collaborate, learn, and grow.<br />
+									Let's build something great together!
 								</p>
 							</div>
 						</div>
@@ -54,23 +56,26 @@ import photoImage from "../assets/images/photo.jpg";
 			</BackgroundImage>
 		</section>
 
-		<section class="scroll-section adapt-height" id="works" data-anchor="works">
+		<section data-section class="scroll-section adapt-height" id="works" data-anchor="works">
 			<div class="container">
 				<h2>My Projects</h2>
 				<CarouselProjects />
 			</div>
 		</section>
 
-		<section class="scroll-section adapt-height" id="about" data-anchor="about">
+		<section data-section class="scroll-section adapt-height2" id="about" data-anchor="about">
 			<div class="container">
 				<h2>About me</h2>
 				<div class="about-content">
 					<div class="about-text">
-						<p>Hi &hellip; I&apos;m a passionate, enthusiastic and professional Web Developer who loves creating and developing beautiful web experiences using all the skills I&apos;ve acquired over 4 years of dedication to studying and freelancing.
+						<p>
+							Hi there! I'm Valeria, a passionate and enthusiastic Web Developer with over 3 years of dedicated study and freelancing experience. I thrive on creating beautiful web experiences, leveraging a diverse set of skills acquired throughout my journey.
 						</p>
-						<p>During last 2 years I&apos;ve been working on many various projects to polish my skills in web development. My main approach is to focus on customers needs, to provide comfortable interface, clean code and professional performance.
+						<p>
+							Over the past 2 years, I've immersed myself in various projects, honing my expertise in web development. My primary focus is always on understanding customers' needs, delivering a comfortable interface, maintaining clean code, and ensuring professional performance.
 						</p>
-						<p>In the outside of coding, I found my passion in events for kids, so I&apos;ve organized my event agency for bringing joy and happiness. I deeply understand what it takes for local business to succeed online.
+						<p>
+							Beyond the world of coding, I've discovered another passion: organizing events for kids. This led me to establish my own event agency, dedicated to spreading joy and happiness. This unique perspective has given me a profound understanding of what it takes for local businesses to succeed online. I believe in the power of blending creativity with technical precision, and I am excited about the endless possibilities that web development offers.
 						</p>
 						
 						<a href="\cv_valeria_kan_web_developer.pdf" class="about-link" target="_blank">
@@ -78,16 +83,14 @@ import photoImage from "../assets/images/photo.jpg";
 						</a>
 						
 						<h3>My Skills</h3>
+						{/*
 						<p>
 							I use a number of tools that make design and development much easier.
 						</p>
+						 */}
 						<p>
 							<span class="about-skill">Web App Development:</span>
-							HTML5, CSS3, SASS/LESS, React, Astro, Next.js, Redux, JSON, jQuery, GULP, WebPack, Vite, Bootstrap, Material UI, Tailwind CSS, PostCSS
-						</p>
-						<p>
-							<span class="about-skill">Languages:</span>
-							JavaScript, TypeScript, Node.js, PHP
+							HTML5, CSS3, SASS/LESS, JavaScript, TypeScript, React, Redux, Astro, Next.js, Node.js, PHP, jQuery, GULP, WebPack, Vite, Bootstrap, Material UI, Tailwind CSS, PostCSS
 						</p>
 						<p>
 							<span class="about-skill">Databases:</span>
@@ -105,10 +108,12 @@ import photoImage from "../assets/images/photo.jpg";
 							<span class="about-skill">UI design, Graphic design and Prototyping:</span>
 							Figma, Adobe Photoshop
 						</p>
+						{/*
 						<p>
 							<span class="about-skill">Other:</span>
 							Google Apps(Docs, sheets, slides and forms), Google Analytics, Google Optimize
 						</p>
+						 */}
 					</div>
 					<div class="about-img">
 						<Image src={photoImage} alt="my photo picture" format="avif" />
@@ -116,7 +121,8 @@ import photoImage from "../assets/images/photo.jpg";
 				</div>
 			</div>
 		</section>
-		<section class="scroll-section" id="contact" data-anchor="contact">
+
+		<section data-section class="scroll-section" id="contact" data-anchor="contact">
 			<BackgroundImage
 				src="/src/assets/images/bg_contact.jpg"
 				format={["avif", "webp"]}
@@ -145,7 +151,7 @@ import photoImage from "../assets/images/photo.jpg";
 						<div class="comment-block contacts-comment">
 							<div>
 								<p>
-									Please let me know if you have any idea for linking up with me.<br> I&apos;d love to hear from you :)
+									I'm always open to collaborating with fellow developers and designers to create innovative and impactful solutions. If you have an interesting project or idea, let's connect and bring it to life together! 👋
 								</p>
 							</div>
 						</div>
@@ -159,4 +165,4 @@ import photoImage from "../assets/images/photo.jpg";
 
 <script>
 	/* import "../js/firefly.js" */
-</script>../data/projectsData
+</script>

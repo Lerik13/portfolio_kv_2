@@ -17,6 +17,8 @@ body {
 	font-size: 1rem;
 	font-weight: 300;
 	line-height: 1.5;
+	overflow: hidden;
+	background-color: $bg2Color;
 }
 
 .container {
@@ -61,6 +63,12 @@ body {
 	padding-top: 50px;
 	scroll-padding-top: 50px;
 }
+@media (prefers-reduced-motion: no-preference) {
+	.scroll-wrapper {
+		scroll-behavior: smooth;
+	}
+}
+
 .scroll-section {
 	z-index: 0;
 	display: flex;
@@ -81,6 +89,10 @@ body {
 	@media (height > $md3) {
 		height: 100%;
 	}
+}
+
+.adapt-height2 {
+	height: fit-content;
 }
 
 h2 {

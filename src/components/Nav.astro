@@ -1,21 +1,62 @@
 ---
 ---
-<nav>
-	<div class="container">
-		<ul>
-			<li><a class="a-nav active" href="/#main" id="a-main" aria-label="Main screen">Main</a></li>
-			<li><a class="a-nav" href="/#works" id="a-works" aria-label="See my projects">Works</a></li>
-			<li><a class="a-nav" href="/#about" id="a-about" aria-label="Read about me as web developer">About</a></li>
-			<li><a class="a-nav" href="/#contact" id="a-contact" aria-label="How to contact with me">Contact</a></li>
-		</ul>
-	</div>
-</nav>
+<header>
+	<nav>
+		<div class="container">
+			<ul>
+				<li class="main">
+					<a id="a-main" class="a-nav active" href="#main" data-link aria-label="Main screen">Main</a>
+				</li>
+				<li class="works">
+					<a id="a-works" class="a-nav" href="#works" data-link aria-label="See my projects">Works</a>
+				</li>
+				<li class="about">
+					<a id="a-about" class="a-nav" href="#about" data-link aria-label="Read about me as web developer">About</a>
+				</li>
+				<li class="contact">
+					<a id="a-contact" class="a-nav" href="#contact" data-link aria-label="How to contact with me">Contact</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+</header>
 
 <script>
-	document.querySelectorAll(".a-nav").forEach(a => a.addEventListener('click', setLinkActive));
+	const sections = [...document.querySelectorAll('[data-section]')]
+	const scrollRoot = document.querySelector('[data-scroller]')
+	const navLinks = [...document.querySelectorAll('header nav .container ul li a')]
+
+	const options = {
+		root: scrollRoot,
+		rootMargin: '-50px',
+		threshold: 0.5
+	}
+
+	/* The callback that will fire on intersection */
+	const onIntersect = (entries) => {
+		entries.forEach((entry) => {
+			navLinks.forEach(a => a.classList.remove('active'));
+			document.querySelector(`#a-${entry.target.id}`).classList.add('active');
+		})
+	}
+
+	/* Create the observer */
+	const observer = new IntersectionObserver(onIntersect, options)
+
+	/* Set our observer to observe each section */
+	sections.forEach((section) => {
+		observer.observe(section)
+	});
+
+	setTimeout(() => { // activate Main link
+		navLinks.forEach(a => a.classList.remove('active'));
+		document.querySelector('#a-main').classList.add('active');
+	}, 500)
+
+	navLinks.forEach(a => a.addEventListener('click', setLinkActive));
 
 	function setLinkActive(e){
-		document.querySelectorAll(".a-nav").forEach(a => a.classList.remove('active'));
+		navLinks.forEach(a => a.classList.remove('active'));
 		document.querySelector(`#${e.target.id}`).classList.add('active');
 	}
 </script>

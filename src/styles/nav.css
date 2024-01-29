@@ -1,9 +1,12 @@
+header {
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+	background-color: $blackColor;
+}
+
 nav {
 	height: 50px;
-	position: fixed;
-	z-index:100;
-	background-color: $blackColor;
-	width: 100%;
 	display: flex;
 }
 
@@ -23,7 +26,8 @@ nav {
 	li {
 		margin-left: 20px;
 	}
-	a {
+
+ a {
 		color: $whiteColor;
 	}
 	a:hover, a.active {
@@ -32,4 +36,5 @@ nav {
 	a.active {
 		color: $orangeColor;
 	}
+	
 }
