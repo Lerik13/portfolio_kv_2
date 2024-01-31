@@ -22,41 +22,40 @@
 </header>
 
 <script>
-	const sections = [...document.querySelectorAll('[data-section]')]
-	const scrollRoot = document.querySelector('[data-scroller]')
-	const navLinks = [...document.querySelectorAll('header nav .container ul li a')]
+const sections = [...document.querySelectorAll('[data-section]')]
+const scrollRoot = document.querySelector('[data-scroller]')
+const navLinks = [...document.querySelectorAll('.a-nav')]
 
-	const options = {
-		root: scrollRoot,
-		rootMargin: '-50px',
-		threshold: 0.5
-	}
+const options = {
+	root: scrollRoot,
+	rootMargin: '-50px',
+	threshold: 0.5
+}
 
-	/* The callback that will fire on intersection */
-	const onIntersect = (entries) => {
-		entries.forEach((entry) => {
-			navLinks.forEach(a => a.classList.remove('active'));
-			document.querySelector(`#a-${entry.target.id}`).classList.add('active');
-		})
-	}
-
-	/* Create the observer */
-	const observer = new IntersectionObserver(onIntersect, options)
-
-	/* Set our observer to observe each section */
-	sections.forEach((section) => {
-		observer.observe(section)
-	});
-
-	setTimeout(() => { // activate Main link
+/* The callback that will fire on intersection */
+const onIntersect = (entries) => {
+	entries.forEach((entry) => {
+		//console.log("OnIntersection id = "+entry.target.id)
+	
 		navLinks.forEach(a => a.classList.remove('active'));
-		document.querySelector('#a-main').classList.add('active');
-	}, 500)
+		document.querySelector(`#a-${entry.target.id}`).classList.add('active');
+	})
+}
 
-	navLinks.forEach(a => a.addEventListener('click', setLinkActive));
+/* Create the observer */
+const observer = new IntersectionObserver(onIntersect, options)
 
-	function setLinkActive(e){
-		navLinks.forEach(a => a.classList.remove('active'));
-		document.querySelector(`#${e.target.id}`).classList.add('active');
-	}
+/* Set our observer to observe each section */
+sections.toReversed().map((section) => {
+	observer.observe(section)
+})
+/*
+navLinks.forEach(a => a.addEventListener('click', setLinkActive));
+
+function setLinkActive(e){
+	navLinks.forEach(a => a.classList.remove('active'));
+	document.querySelector(`#${e.target.id}`).classList.add('active');
+}
+*/
+
 </script>

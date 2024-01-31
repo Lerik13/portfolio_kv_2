@@ -27,14 +27,10 @@ nav {
 		margin-left: 20px;
 	}
 
- a {
+	a {
 		color: $whiteColor;
 	}
 	a:hover, a.active {
 		color: $orangeColor;
 	}
-	a.active {
-		color: $orangeColor;
-	}
-	
 }

@@ -91,14 +91,11 @@ body {
 	}
 }
 
-.adapt-height2 {
-	height: fit-content;
-}
 
 h2 {
 	font-size: 2.2rem;
 	font-weight: 600;
-	margin: 20px 0 10px 0;
+	margin: 20px 0 20px 0;
 	display: inline-block;
 	z-index: 1;
 	width: fit-content;
@@ -199,6 +196,7 @@ h2 {
 	@media (width > $md3) {
 		width: 60%;
 		font-size: 18px;
+		padding-top: 0px;
 	}
 	
 	p {
