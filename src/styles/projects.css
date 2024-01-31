@@ -1,5 +1,6 @@
 
 .projects {
+	display: flex;
 	position: relative;
 	height: 100%;
 	
@@ -119,7 +120,7 @@
 	}
 }
 .arrow-left {
-	left: -15px;
+	left: -12px;
 	@media (width > $md3) {
 		left: -25px;
 	}
@@ -128,7 +129,7 @@
 	}
 }
 .arrow-right {
-	right: -15px;
+	right: -12px;
 	@media (width > $md3) {
 		right: -25px;
 	}
