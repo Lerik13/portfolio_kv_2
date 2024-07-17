@@ -26,7 +26,7 @@ const projectsData = [
 	{
 		"image": "/projects/victoria-piano.jpg",
 		"name": "Piano Teacher Website",
-		"link_demo": "https://victoriapiano.ca",
+		"link_demo": "https://victoria-piano.netlify.app",
 		"link_code": "https://github.com/Lerik13/piano-teacher/tree/victoria",
 		"technologies": "Vite, JavaScript, HTML5, CSS3, JSON",
 		"description": 'Multilanguage Landing page for piano teacher with information about her teaching method, "About" block, "options for students" and Contact Form. Additional feature is Light&Dark mode.'
