@@ -37,7 +37,7 @@ const projectsData = [
     link_demo: 'https://mountain-villa.netlify.app',
     link_code: 'https://github.com/Lerik13/react-hotel-app',
     description:
-      'Mountain Villa is a full-stack application that simplifies hotel operations by offering tools for managing reservations, guest information, and user authorization. With an intuitive interface, it streamlines booking, guest record maintenance, and staff access management. Its flexible architecture makes it ideal for properties of any size, optimizing day-to-day operations.',
+      'Mountain Villa is a full-stack application that simplifies hotel operations by offering tools for managing reservations, guest information, and user authorization. With an intuitive interface, it streamlines booking, guest record maintenance, and staff access management.',
   },
   {
     image: '/projects/victoria-piano.jpg',
