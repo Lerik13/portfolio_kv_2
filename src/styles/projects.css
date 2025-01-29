@@ -35,7 +35,7 @@
 
 	&-image {
 		border-bottom: 0px solid $grayColor;
-		height: 200px;
+		//height: 200px;
 
 		img {
 			border-top-left-radius: $rounded;
