@@ -1,17 +1,16 @@
 const projectsData = [
   {
     image: '/projects/sweets-alla.jpg',
-    name: 'Sweets Catalog - Bakery Shop',
+    name: 'Catalog of Bakery Products',
     link_demo: 'https://sweets-alla.netlify.app/',
     link_code: 'https://github.com/Lerik13/sweets-by-alla',
-    technologies:
-      'Astro framework, React.js, MongoDB, Node.js, Tailwind CSS, Figma',
+    technologies: 'Astro framework, Supabase, JavaScript, Tailwind CSS, Figma',
     description:
-      'Multi-page web-application with responsive web design (mobile-first approach) for offering sweet home-made treats. All products, categories, reviews, info for hero block are storing in MongoDB. Application is SSR (everything built in time by deafault, except static pages with adapter)',
+      'A multi-page web application with a mobile-first responsive design for showcasing delicious homemade treats. The website is statically generated (SSG) for optimal performance and delivers a seamless browsing experience.',
   },
   {
     image: '/projects/photograph-tanya.jpg',
-    name: 'Portfolio Photographer - Photo Galary',
+    name: 'Portfolio Photographer - Photo Gallery',
     link_demo: 'https://ta-photograph.netlify.app',
     link_code: 'https://github.com/Lerik13/photograph-portfolio-tanya',
     technologies:
@@ -27,7 +26,7 @@ const projectsData = [
     link_demo: 'https://magic-artstudio.com',
     link_code: 'https://github.com/Lerik13/magic-artstudio',
     description:
-      'Multi-page website for Event Agency. The main idea was to create vivid and attractive web-product, to give clients the possibility to skim through all of the significant information from the main page and to make an order.',
+      'Multi-page website for Event Agency. The main idea was to create vivid and attractive web-product, to give clients the possibility to skim through all of the significant information, from the main page and to make an order.',
   },
   {
     image: '/projects/mountain-villa.jpg',
@@ -66,7 +65,7 @@ const projectsData = [
     link_demo: 'https://maria-bubble-show.netlify.app',
     link_code: 'https://github.com/Lerik13/masha-bubble-show',
     description:
-      'Maria`s Bubble Show is a responsive multipage website that highlights the fun and captivating bubble entertainment service. It features sections like Client Reviews, FAQ, booking options, a photo gallery, and a contact form, making it easy for users to explore the service and book their own bubble show.',
+      'Maria`s Bubble Show is a responsive multi-page website that highlights the fun and captivating bubble entertainment service. It features sections like Client Reviews, FAQ, booking options, a photo gallery, and a contact form, making it easy for users to explore the service and book their own bubble show.',
   },
 ]
 export default projectsData
