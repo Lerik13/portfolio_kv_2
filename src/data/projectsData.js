@@ -2,8 +2,8 @@ const projectsData = [
   {
     image: '/projects/sweets-alla.jpg',
     name: 'Catalog of Bakery Products',
-    link_demo: 'https://sweets-alla.netlify.app/',
-    link_code: 'https://github.com/Lerik13/sweets-by-alla',
+    link_demo: 'https://sweets-by-alla.netlify.app/',
+    link_code: 'https://github.com/Lerik13/sweets-alla',
     technologies: 'Astro framework, Supabase, JavaScript, Tailwind CSS, Figma',
     description:
       'A multi-page web application with a mobile-first responsive design for showcasing delicious homemade treats. The website is statically generated (SSG) for optimal performance and delivers a seamless browsing experience.',
